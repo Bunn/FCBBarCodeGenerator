@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FCBBarCodeGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" placeholder="Type code here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eXG-RK-gTK">
+                                <rect key="frame" x="20" y="28" width="488" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpa-e7-3b5">
+                                <rect key="frame" x="516" y="28" width="64" height="30"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="generateButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mB6-iU-hKf"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fct-Cm-Cis">
+                                <rect key="frame" x="161" y="66" width="279" height="29"/>
+                                <segments>
+                                    <segment title="QRCode"/>
+                                    <segment title="Code128"/>
+                                    <segment title="PDF417"/>
+                                    <segment title="Aztec"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njk-zT-qET" userLabel="imageContainer">
+                                <rect key="frame" x="20" y="102" width="560" height="490"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="7kp-pi-Bkb">
+                                        <rect key="frame" x="0.0" y="95" width="560" height="300"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7kp-pi-Bkb" secondAttribute="height" multiplier="1:1" id="89M-uy-1Xf"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="89M-uy-1Xf"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7kp-pi-Bkb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Njk-zT-qET" secondAttribute="top" constant="20" symbolic="YES" id="AIY-Bf-B1g"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7kp-pi-Bkb" secondAttribute="bottom" constant="20" symbolic="YES" id="TT7-Ld-jLY"/>
+                                    <constraint firstItem="7kp-pi-Bkb" firstAttribute="centerX" secondItem="Njk-zT-qET" secondAttribute="centerX" id="bv9-l6-q9D"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7kp-pi-Bkb" secondAttribute="trailing" id="ldq-ix-4hj"/>
+                                    <constraint firstItem="7kp-pi-Bkb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Njk-zT-qET" secondAttribute="leading" id="uTE-pb-bNo"/>
+                                    <constraint firstItem="7kp-pi-Bkb" firstAttribute="centerY" secondItem="Njk-zT-qET" secondAttribute="centerY" id="zzU-Xq-GNy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Njk-zT-qET" secondAttribute="bottom" constant="8" symbolic="YES" id="4F3-cm-0lp"/>
+                            <constraint firstItem="zpa-e7-3b5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="H0X-ir-gnE"/>
+                            <constraint firstItem="eXG-RK-gTK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Kvs-Ll-tHI"/>
+                            <constraint firstItem="fct-Cm-Cis" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PQR-Vt-dmc"/>
+                            <constraint firstItem="Njk-zT-qET" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UA1-Ny-1Y2"/>
+                            <constraint firstItem="zpa-e7-3b5" firstAttribute="leading" secondItem="eXG-RK-gTK" secondAttribute="trailing" constant="8" symbolic="YES" id="c5i-hn-iEC"/>
+                            <constraint firstItem="Njk-zT-qET" firstAttribute="top" secondItem="fct-Cm-Cis" secondAttribute="bottom" constant="8" symbolic="YES" id="cvU-0G-ID1"/>
+                            <constraint firstItem="eXG-RK-gTK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dOq-Sg-QEd"/>
+                            <constraint firstItem="fct-Cm-Cis" firstAttribute="top" secondItem="eXG-RK-gTK" secondAttribute="bottom" constant="8" symbolic="YES" id="eIO-UE-rjb"/>
+                            <constraint firstItem="Njk-zT-qET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fLC-NG-LW1"/>
+                            <constraint firstItem="zpa-e7-3b5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="nNf-Uc-Stt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageContainer" destination="Njk-zT-qET" id="9UF-ox-vrA"/>
+                        <outlet property="imageView" destination="7kp-pi-Bkb" id="1Xh-Q9-B6t"/>
+                        <outlet property="segmentedControl" destination="fct-Cm-Cis" id="WtF-7P-Kwd"/>
+                        <outlet property="textField" destination="eXG-RK-gTK" id="qAl-T1-oON"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570" y="464"/>
+        </scene>
+    </scenes>
+</document>
