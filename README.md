@@ -21,4 +21,4 @@ if let image = codeGenerator.barcodeWithCode(code, type: type, size: size) {
 ![QRCode](/Screenshots/screenshot.png?raw=true "QRCode")
 
 ## License
-FCBBouncingView is released under the MIT license. See the LICENSE file for more info.
+FCBBarConeGenerator is released under the MIT license. See the LICENSE file for more info.
