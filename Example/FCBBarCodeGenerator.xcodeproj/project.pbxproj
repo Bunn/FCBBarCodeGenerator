@@ -13,7 +13,19 @@
 		31108C001C8247FD00CFF948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31108BFF1C8247FD00CFF948 /* Assets.xcassets */; };
 		31108C031C8247FD00CFF948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31108C011C8247FD00CFF948 /* LaunchScreen.storyboard */; };
 		312835E81C8B520E00B7B025 /* FCBBarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312835E71C8B520E00B7B025 /* FCBBarCodeGenerator.swift */; };
+		B670332D1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670332C1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.swift */; };
+		B67033341E798C1500B48DA1 /* FCBBarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312835E71C8B520E00B7B025 /* FCBBarCodeGenerator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B670332F1E798BD000B48DA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31108BED1C8247FD00CFF948 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31108BF41C8247FD00CFF948;
+			remoteInfo = FCBBarCodeGenerator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		31108BF51C8247FD00CFF948 /* FCBBarCodeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCBBarCodeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,20 @@
 		31108C021C8247FD00CFF948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31108C041C8247FD00CFF948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312835E71C8B520E00B7B025 /* FCBBarCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FCBBarCodeGenerator.swift; path = ../../Generator/FCBBarCodeGenerator.swift; sourceTree = "<group>"; };
+		B670332A1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCBBarCodeGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B670332C1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCBBarCodeGeneratorTests.swift; sourceTree = "<group>"; };
+		B670332E1E798BD000B48DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		31108BF21C8247FD00CFF948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67033271E798BD000B48DA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				31108BF71C8247FD00CFF948 /* FCBBarCodeGenerator */,
+				B670332B1E798BD000B48DA1 /* FCBBarCodeGeneratorTests */,
 				31108BF61C8247FD00CFF948 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				31108BF51C8247FD00CFF948 /* FCBBarCodeGenerator.app */,
+				B670332A1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +107,15 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		B670332B1E798BD000B48DA1 /* FCBBarCodeGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B670332C1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.swift */,
+				B670332E1E798BD000B48DA1 /* Info.plist */,
+			);
+			path = FCBBarCodeGeneratorTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,18 +136,42 @@
 			productReference = 31108BF51C8247FD00CFF948 /* FCBBarCodeGenerator.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B67033291E798BD000B48DA1 /* FCBBarCodeGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B67033311E798BD000B48DA1 /* Build configuration list for PBXNativeTarget "FCBBarCodeGeneratorTests" */;
+			buildPhases = (
+				B67033261E798BD000B48DA1 /* Sources */,
+				B67033271E798BD000B48DA1 /* Frameworks */,
+				B67033281E798BD000B48DA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B67033301E798BD000B48DA1 /* PBXTargetDependency */,
+			);
+			name = FCBBarCodeGeneratorTests;
+			productName = FCBBarCodeGeneratorTests;
+			productReference = B670332A1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		31108BED1C8247FD00CFF948 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = iDevzilla;
 				TargetAttributes = {
 					31108BF41C8247FD00CFF948 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0820;
+					};
+					B67033291E798BD000B48DA1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 31108BF41C8247FD00CFF948;
 					};
 				};
 			};
@@ -132,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				31108BF41C8247FD00CFF948 /* FCBBarCodeGenerator */,
+				B67033291E798BD000B48DA1 /* FCBBarCodeGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +202,13 @@
 				31108C031C8247FD00CFF948 /* LaunchScreen.storyboard in Resources */,
 				31108C001C8247FD00CFF948 /* Assets.xcassets in Resources */,
 				31108BFE1C8247FD00CFF948 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67033281E798BD000B48DA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +225,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B67033261E798BD000B48DA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67033341E798C1500B48DA1 /* FCBBarCodeGenerator.swift in Sources */,
+				B670332D1E798BD000B48DA1 /* FCBBarCodeGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B67033301E798BD000B48DA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31108BF41C8247FD00CFF948 /* FCBBarCodeGenerator */;
+			targetProxy = B670332F1E798BD000B48DA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		31108BFC1C8247FD00CFF948 /* Main.storyboard */ = {
@@ -273,6 +355,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.idevzilla.FCBBarCodeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -284,6 +367,45 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.idevzilla.FCBBarCodeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B67033321E798BD000B48DA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = FCBBarCodeGeneratorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.FCBBarCodeGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FCBBarCodeGenerator.app/FCBBarCodeGenerator";
+			};
+			name = Debug;
+		};
+		B67033331E798BD000B48DA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = FCBBarCodeGeneratorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.FCBBarCodeGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FCBBarCodeGenerator.app/FCBBarCodeGenerator";
 			};
 			name = Release;
 		};
@@ -307,6 +429,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B67033311E798BD000B48DA1 /* Build configuration list for PBXNativeTarget "FCBBarCodeGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67033321E798BD000B48DA1 /* Debug */,
+				B67033331E798BD000B48DA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

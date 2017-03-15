@@ -18,20 +18,20 @@ class ViewController: UIViewController {
             let smallerSide = min(imageContainer.frame.size.width, imageContainer.frame.height)
             
             switch segmentedControl.selectedSegmentIndex {
-            case 0 : type = FCBBarcodeType.QRCode
+            case 0 : type = .qrcode
             size = CGSize(width: smallerSide, height: smallerSide)
                 
-            case 1 : type = FCBBarcodeType.Code128
+            case 1 : type = .code128
             size = CGSize(width: imageContainer.frame.width, height: imageContainer.frame.width / 2)
                 
-            case 2 : type = FCBBarcodeType.PDF417
+            case 2 : type = .pdf417
             size = CGSize(width: imageContainer.frame.width, height: imageContainer.frame.width / 2)
            
-            case 3 : type = FCBBarcodeType.Aztec
+            case 3 : type = .aztec
             size = CGSize(width: smallerSide, height: smallerSide)
                 
             default:
-                type = FCBBarcodeType.QRCode
+                type = .qrcode
                 size = CGSize(width: smallerSide, height: smallerSide)
                 break
             }
