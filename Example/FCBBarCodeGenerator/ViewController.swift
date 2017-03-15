@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             }
             
 
-            if let image = codeGenerator.barcodeWithCode(text, type: type, size: size) {
+            if let image = codeGenerator.barcode(code: text, type: type, size: size) {
                 imageView.image = image
             } else {
                 imageView.image = nil
